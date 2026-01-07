@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Android NDK
         uses: nttld/setup-ndk@v1
@@ -35,7 +35,7 @@ jobs:
           java-version: 11
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v4
+        uses: android-actions/setup-android@v3
 
       - name: Setup Haxe
         uses: krdlab/setup-haxe@v1.1.5
@@ -85,7 +85,7 @@ jobs:
         run: haxelib run lime build android --app-version="4.0.0-${{ github.run_id}}"
 
       - name: Publish Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: Android Build
           path: export/release/android/bin/app/build/outputs/apk/debug
