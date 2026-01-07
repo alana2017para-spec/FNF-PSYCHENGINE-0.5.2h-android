@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Buildsus
+name: Buildermegasus
 
 # Controls when the action will run. 
 on:
@@ -38,7 +38,7 @@ jobs:
         uses: android-actions/setup-android@v4
 
       - name: Setup Haxe
-        uses: krdlab/setup-haxe@v4.1.5
+        uses: krdlab/setup-haxe@v1.1.5
         with:
           haxe-version: 4.2.5
 
